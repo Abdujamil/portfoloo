@@ -7,14 +7,26 @@
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #333127;
+  cursor: none !important;
 }
 
 body {
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  position: relative;
+  cursor: none;
 }
+
+.section {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+/* #Header
+================================================== */
 
 .header__container {
   max-width: 1300px;
@@ -23,7 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #000;
+  color: #333127;
   padding-top: 40px;
   font-weight: 400;
 }
@@ -45,13 +57,18 @@ body {
   font-weight: 300;
 }
 
-.container {
-  max-width: 1300px;
-  padding: 0 10px;
-  margin: 0 auto;
+.line {
+  height: 70px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Intro */
+.line span {
+  position: absolute;
+}
+
+/* #Intro
+================================================== */
 
 .intro {
   display: flex;
@@ -84,15 +101,15 @@ body {
 
 .intro__btn svg {
   /* height: 0; */
-  cursor: pointer;
+
   transition: height 0.5s ease-in-out;
 }
 .intro__btn:hover svg {
   height: 100%;
 }
 
-/* About */
-
+/* #About
+================================================== */
 .about {
   margin-bottom: 150px;
 }
@@ -115,6 +132,10 @@ body {
   grid-column-start: 1;
 }
 
+.desc span {
+  font-weight: 600;
+}
+
 .about__desc1 {
   grid-row-start: 2;
   grid-column-end: 3;
@@ -134,7 +155,8 @@ body {
   border-radius: 8px;
 }
 
-/* Experience */
+/* #Experience
+================================================== */
 
 .experience {
   width: 100%;
@@ -194,6 +216,9 @@ body {
 }
 
 /* Skills */
+
+/* #Skills
+================================================== */
 
 .skills {
   text-align: center;
@@ -270,13 +295,12 @@ body {
 
 .logo__items img {
   height: 100px;
-  cursor: pointer;
 }
 
 .logo__items svg {
   height: 64px;
   width: 64px;
-  cursor: pointer;
+
   transition: all 0.3s ease-in-out;
 }
 
@@ -289,8 +313,8 @@ body {
   fill: #e14e1d;
 }
 
-/* Projects */
-
+/* #Projects
+================================================== */
 .projects {
   margin-bottom: 150px;
   height: 800px;
@@ -355,11 +379,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover {
-  /* transform: scale(1.1) */
-  /* border: 5px solid #545cff; */
-}
-
 .card-bdo {
   background: url(./img/bdo.png);
 }
@@ -397,7 +416,7 @@ body {
 
 .card__header a:hover {
   background-color: #fff;
-  color: #000;
+  color: #333127;
 }
 
 .card__header a:hover img {
@@ -423,7 +442,7 @@ body {
   display: grid;
   place-items: center;
 
-  background: #000;
+  background: #333127;
   z-index: 1000;
 
   opacity: 1;
@@ -434,4 +453,208 @@ body {
   font-size: clamp(2rem, 2vw, 5rem);
   font-weight: 800;
   color: #fff;
+}
+
+/* #Footer
+================================================== */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 950px;
+  padding-bottom: 40px !important;
+}
+
+.footer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+}
+
+.footer__form h3 {
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 26px;
+}
+
+.footer__form p {
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 300;
+  margin-bottom: 70px;
+}
+
+.footer__inpts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 45px;
+}
+
+.footer__inpts input {
+  border: none;
+  border-bottom: 2px solid #333127;
+  padding: 12px 24px;
+  width: 100%;
+  outline: none;
+
+  font-size: 18px;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.footer__btn button {
+  margin-top: 70px;
+  padding: 12px 52px;
+  border-radius: 8px;
+  border: 2px solid #333127;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__btn button:hover {
+  background-color: #333127;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.footer__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer__footer-arrUp,
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+
+  border: 2px solid #333127;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer__footer-arrUp:hover {
+  background-color: #333127;
+}
+
+.footer__footer-arrUp:hover svg path {
+  fill: #fff;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.footer__footer-arrUp:hover,
+.icon:hover {
+  background-color: #333127;
+  transform: scale(1.2);
+}
+
+.icon:hover svg path {
+  fill: #fff;
+}
+
+@-webkit-keyframes spin {
+  50% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes spin {
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+.wobble span {
+  display: inline-block;
+  pointer-events: none;
+}
+
+.wobble span.spin {
+  -webkit-animation: spin 0.5s 1;
+  animation: spin 0.5s 1;
+}
+
+/* #Cursor
+================================================== */
+
+.cursor {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: #333127;
+  position: fixed;
+  z-index: 9999999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.cursor-f {
+  width: var(--size);
+  height: var(--size);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid #333127;
+  border-radius: 50px;
+  background-size: cover;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999999;
+
+  opacity: 0.5;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.cursor-hover {
+  -webkit-transform: scale(8);
+  -ms-transform: scale(8);
+  transform: scale(8);
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
